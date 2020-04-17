@@ -1,38 +1,138 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  position: relative;
+  font-family: sans-serif;
+}
+
 .App {
-  text-align: center;
+  width: 76%;
+  display: grid;
+  grid-template-columns: 16% auto;
+  margin: 5vh auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.loader {
+  width: 200px;
+  display: block;
+  margin: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.products {
+  margin: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 10px auto;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  padding: 14px 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.card-title {
+  margin-top: 9px;
+  margin-bottom: 3px;
+  color: #196ead;;
+  cursor: pointer;
+
+}
+.container ,.col-sm-4 {
+border: 1px solid #ccc;
+
+}
+.price {
+  margin-top: 0;
+  margin-bottom: 8px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.card-image {
+  width: 248px;
+  height: auto;
+}
+.add-to-cart {
+  padding: 5px 10px;
+  width: auto ;
+  font-size: .8rem;
+  color: black;
+  cursor: pointer;
+  background: hsl(44, 98%, 49%);
+  border: 0;
+  border-radius: 20px;
+  transition: background 0.4s;
+}
+
+.add-to-cart:hover {
+  background: #196ead;
+}
+
+.add-to-cart:focus {
+  outline: none;
+}
+
+
+
+.checkout-btn {
+  margin-top: 20px;
+  width: auto;
+  padding: 5px 10px;
+  font-weight: bold;
+  color: Black;
+  background: #f58f09;
+  font-size: .8rem;
+  border: 0;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.7s;
+}
+
+.checkout-btn:hover {
+  background: midnightblue;
+}
+
+.item-title {
+  color: darkgoldenrod;
+  font-weight: bolder;
+  font-size: 1.25rem;
+ 
+}
+
+.item-quantity {
+  color: cadetblue;
+}
+
+.cart-item-price {
+  color: #196ead;
+  font-size: 1.4rem;
+}
+
+
+@media only screen and (max-width: 1000px) {
+  .App {
+    grid-template-columns: 100%;
   }
-  to {
-    transform: rotate(360deg);
+
+  
+  .sort-list {
+    margin: auto;
   }
+
+  .products-nav h3 {
+    margin: 10px auto;
+  }
+
+  .products-length {
+    display: flex;
+    justify-content: center;
+  }
+
+  
 }
